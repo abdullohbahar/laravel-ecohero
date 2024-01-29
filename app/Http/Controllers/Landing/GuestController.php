@@ -13,7 +13,13 @@ class GuestController extends Controller
         $resi = $request->resi;
 
         if ($resi) {
-            $tracking = TrackingData::with('timelines')->where('resi_number', $resi)->first();
+            $tracking = TrackingData::with(
+                [
+                    'timelines' => function ($query) {
+                        $query->orderBy('tanggal', 'desc');
+                    }
+                ]
+            )->where('resi_number', $resi)->first();
         } else {
             $tracking = [];
         }
