@@ -80,17 +80,6 @@
                                 <h5 class="text-capitalize"><b>{{ $timeline->status }}</b></h5>
                                 <p class="text-capitalize"> {{ $timeline->asal }}
                                     {{ ' - ' . $timeline->tujuan }}</p>
-                                <div class="row mt-2">
-                                    <div class="col-12">
-                                        <button class="btn btn-sm btn-warning" id="editBtn"
-                                            data-id="{{ $timeline->id }}" data-tanggal="{{ $timeline->tanggal }}"
-                                            data-jam="{{ \Carbon\Carbon::parse($timeline->jam)->format('H:i') }}"
-                                            data-status="{{ $timeline->status }}" data-asal="{{ $timeline->asal }}"
-                                            data-tujuan="{{ $timeline->tujuan }}">Edit</button>
-                                        <button class="btn btn-sm btn-danger" data-id="{{ $timeline->id }}"
-                                            id="removeBtn">Hapus</button>
-                                    </div>
-                                </div>
                             </div>
                         </li>
                     @empty
