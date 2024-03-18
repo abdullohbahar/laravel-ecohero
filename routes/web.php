@@ -5,10 +5,7 @@ use App\Http\Controllers\Admin\DashboardAdminController;
 use App\Http\Controllers\Admin\TrackingDataController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\AuthController;
-<<<<<<< HEAD
-=======
 use App\Http\Controllers\HomepageController;
->>>>>>> 994e61ef95ba52bd0607190e9ead9228d44a9b52
 use App\Http\Controllers\Landing\GuestController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,10 +26,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [GuestController::class, 'index'])->name('landing');
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 994e61ef95ba52bd0607190e9ead9228d44a9b52
 Route::get('/admin/login', [AuthController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/auth', [AuthController::class, 'authenticate'])->name('auth')->middleware('guest');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
