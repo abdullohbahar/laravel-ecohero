@@ -11,8 +11,8 @@
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('./assets/plugins/fontawesome-free/css/all.min.css') }}">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+     <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{{ asset('./assets/dist/icon.png') }}" rel="icon">
     <!-- Tempusdominus Bootstrap 4 -->
     <link rel="stylesheet"
         href="{{ asset('./assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
@@ -77,7 +77,7 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="index.php" class="brand-link">
-                <img src="{{ asset('./assets/dist/img/iconecohero.png') }}" alt="AdminLTE Logo"
+                <img src="{{ asset('./assets/dist/img/icon.png') }}" alt="AdminLTE Logo"
                     class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">Tracking App</span>
             </a>
@@ -206,6 +206,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -221,7 +222,7 @@
     </script>
 
     @if (session()->has('success'))
-        <script>
+            <script>
             const Toast = Swal.mixin({
                 toast: true,
                 position: 'top-end',
@@ -232,7 +233,9 @@
                     toast.addEventListener('mouseenter', Swal.stopTimer)
                     toast.addEventListener('mouseleave', Swal.resumeTimer)
                 }
-            })
+            });
+        </script>
+
 
             Toast.fire({
                 icon: 'success',
@@ -242,7 +245,7 @@
     @endif
 
     @if (session()->has('error'))
-        <script>
+       <script>
             const Toast = Swal.mixin({
                 toast: true,
                 position: 'top-end',
@@ -250,16 +253,17 @@
                 timer: 3000,
                 timerProgressBar: true,
                 didOpen: (toast) => {
-                    toast.addEventListener('mouseenter', Swal.stopTimer)
-                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    toast.addEventListener('mouseenter', Swal.stopTimer);
+                    toast.addEventListener('mouseleave', Swal.resumeTimer);
                 }
-            })
+            });
 
             Toast.fire({
                 icon: 'error',
-                title: '{{ session('error') }}'
-            })
+                title: "{{ session('error') }}"
+            });
         </script>
+
     @endif
     @stack('addons-js')
 </body>

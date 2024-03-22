@@ -20,12 +20,17 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="/index2.html"><b>Tracking App</a>
+          <div class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 20px;">
+            <img src="{{ asset('./assets/dist/img/iconlogin.png') }}" style="width: 250px; height: auto;">
+            <div style="margin-top: 10px; font-family: 'Lato', sans-serif;"> <!-- Menggunakan margin-top untuk jarak antara ikon dan teks -->
+                <h1 style="font-size: 28px; color: #333; margin-bottom: 5px;"><b>Tracking App</b></h1>
+            </div>
+        </div>
         </div>
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
-                <p class="login-box-msg">Masuk Sebagai Admin</p>
+               <p class="login-box-msg"><strong>Masuk Sebagai Admin</strong></p>
                 @if (session()->has('error'))
                     <div class="col-12">
                         <div class="alert alert-danger" role="alert">
@@ -54,7 +59,7 @@
                     </div>
                     <div class="row">
                         <!-- /.col -->
-                        <div class="col-4">
+                        <div class="col-12">
                             <button type="submit" name="submit" class="btn btn-primary btn-block">Masuk</button>
                         </div>
                         <!-- /.col -->
@@ -65,6 +70,9 @@
         </div>
     </div>
     <!-- /.login-box -->
+</body>
+
+
 
     <!-- jQuery -->
     <script src="{{ asset('./assets/plugins/jquery/jquery.min.js') }}"></script>

@@ -23,6 +23,7 @@
             right: -25px; 
             padding-right: 5%;
         }
+        
 
 
         
@@ -33,16 +34,19 @@
     <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper" style="margin-bottom: 10px; margin-top:50px; position: relative;">
    <div class="image">
-    <img src="{{ asset('./assets/dist/img/Delive.png') }}" class="img-fluid" style="width: 689px; max-width: 100%; height: auto; position: absolute; right: auto; bottom: 0;">
-    <img src="{{ asset('./assets/dist/img/Order.png') }}" class="img-fluid" style="width: 500px; max-width: 100%; height: auto; position: absolute; right: 20px; bottom: 0;">
+        <!-- Gambar pertama -->
+        <img src="{{ asset('./assets/dist/img/Delive.png') }}" class="img-fluid" style="width: 689px; max-width: 100%; height: auto; position: absolute; right: auto; bottom: 0;">
+
+        <!-- Gambar kedua -->
+        <img src="{{ asset('./assets/dist/img/Order.png') }}" class="img-fluid d-none d-md-inline" style="width: 500px; max-width: 100%; height: auto; position: absolute; right: 20px; bottom: 0;">
    </div>
     <!-- Main content -->
     <div class="text-center">
         <div class="col-md-5 p-lg-5 mx-auto my-5">
             <h1 class="display-4" style="color: #008080; font-weight: bold; font-family: 'Calibri';">Trace &amp; Track</h1>
-            <p class="lead font-weight-normal" style="@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');">
-                 Masukkan nomor resi untuk tracking pengiriman barang kamu disini secara real time dan akurat.</p>
-            <br>
+            <p class="lead font-weight-normal" style="font-family: 'Roboto'; font-size: 20px;">
+                 Cek pengirimanmu dengan nomor resi secara langsung dan akurat.</p>
+           
             <form action="" method="GET" style="max-width: 80%; margin: auto;">
                 <input type="resi" name="resi" value="{{ $resi }}" class="form-control" id="resi" style="width: 100%; height: 70%; text-align: center; font-size: 16px;" placeholder="Input Nomor Resi Anda"> 
                 <br>
@@ -52,6 +56,7 @@
         </div>
     </div>
 </div>
+
 
     <div>
         @if ($resi)
@@ -66,8 +71,8 @@
         <!-- /.content -->
     </div>
 <!-- /.content-wrapper -->
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br>
+
+
 
 <!-- ======= Footer ======= -->
      
@@ -75,8 +80,8 @@
     <footer id="newsletter" style="position: relative;">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="position: absolute; top: 0; left: 0; z-index: 70px;">
-        <path fill="#1e8183" fill-opacity="1" d="M0,64L80,80C160,96,320,128,480,128C640,128,800,96,960,85.3C1120,75,1280,85,1360,90.7L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-        <path fill="#1e8183" fill-opacity="1" d="M0,320L1440,256L1440,0L0,0Z"></path>
+        <path fill="#007374" fill-opacity="1" d="M0,64L80,80C160,96,320,128,480,128C640,128,800,96,960,85.3C1120,75,1280,85,1360,90.7L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+        <path fill="#007374" fill-opacity="1" d="M0,320L1440,256L1440,0L0,0Z"></path>
     </svg>
 
     
@@ -87,13 +92,12 @@
 
         <div class="col-lg-3 col-md-6">
             <div class="footer-widget" style="text-align: left;">
-                <h4 style="color: white;">About Our Company</h4>
-               
-                    <img src="{{ asset('./assets/dist/img/ecomepet.png') }}" alt="logo">
-            
-                <p style="color: white;">EcoHero Cargo International streamlines and oversees the transportation of your goods. 
-                                        Our expertise lies in organizing various cargo services, spanning air freight, inland transportation, 
-                                        and sea freight, ensuring smooth transit from the point of origin to the final destination.”.</p>
+                <h4 style="color: white;">About Our Company</h4>     
+                <br>
+                <p style="color: white;">We’ve taken on the challenge of creating
+                                            eco-friendly shipping solutions. Our goal is
+                                            simple: to offer greener shipping options for
+                                            global cargo needs.</p>
             </div>
 
             <!-- Tambahkan ikon-ikon media sosial di bawah konten "About" -->
@@ -126,59 +130,65 @@
             </div>
         </div>
 
-        
+     <div class="col-lg-3 col-md-6">
+    <div class="footer-widget" style="text-align: left; font-family: 'Lato'sans-serif; font-size: 14px;">
+        <h4 style="color: white;">Navigation</h4>
+        <br>
+        <div style="float: left; width: 50%;">
+            <ul style="list-style-type: none; padding: 0;">
+                <li><a href="https://ecoherocargo.world/" style="color: white; font-weight: bold;">Home</a></li><br>
+                <li><a href="https://ecoherocargo.world/about-us/" style="color: white; font-weight: bold;">About Us</a></li><br>
+                <li><a href="https://ecoherocargo.world/services/" style="color: white; font-weight: bold;">Services</a></li><br>
+                <li><a href="https://ecoherocargo.world/pricing/" style="color: white; font-weight: bold;">Pricing</a></li><br>
+                <li><a href="https://ecoherocargo.world/tracking/" style="color: white; font-weight: bold;">Track your Shipment</a></li><br>
+                <li><a href="https://ecoherocargo.world/get-quote/" style="color: white; font-weight: bold;">Get Quote</a></li><br>
+            </ul>
+        </div>
+        <div style="float: right; width: 50%;">
+            <ul style="list-style-type: none; padding: 0;">
+                <li><a href="https://ecoherocargo.world/personal-shopper/" style="color: white; font-weight: bold;">Personal Shopper</a></li><br>
+                 <li><a href="https://ecoherocargo.world/blog/" style="color: white; font-weight: bold;">Blog</a></li><br>
+                   <li><a href="https://ecoherocargo.world/contact-us/" style="color: white; font-weight: bold;">Contact</a></li><br>
+            </ul>
+        </div>
+    </div>
+</div>
 
 
+       
         <div class="col-lg-3 col-md-6">
             <div class="footer-widget" style="text-align: left;">
-                <h4 style="color: white;">Navigation</h4>
-                <p style="color: black;"><a href="https://ecoherocargo.world/" style="color:white ;">Home</a></p> 
-                <p style="color: black;"><a href="https://ecoherocargo.world/services/" style="color: white;">Services</a></p>
-                <p style="color: black;"><a href="https://ecoherocargo.world/about-us/" style="color: white;">About Us</a></p>
-                <p style="color: black;"><a href="https://ecoherocargo.world/blog/" style="color: white;">Blog</a></p>
-                <p style="color: black;"><a href="https://ecoherocargo.world/personal-shopper/" style="color: white;">Personal Shopper</a></p>
- 
+           <h4 style="color: white;">Contact Us</h4>
+           <br>
+           <p>Feel free to reach out to us anytime, Contact us without hesitation.</p>
+          <ul class="fa-ul" style="margin-left: 1.65em;">
+            <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-map-marker-alt"></i></span><span class="ms-2">160 ROBINSON ROAD, #14-04, Postal 068914 Singapore</span>
+            </li>
+           <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-phone-alt"></i></span><span class="ms-2">+65 9242 9770</span>
+            </li>
 
-            </div>
-            
-        </div>
-         <div class="col-lg-3 col-md-6">
-            <div class="footer-widget" style="text-align: left;">
-                <h4 style="color: white;">Contact Us</h4>
-                <p style="color: white;">
-                <p style="color: white;">Feel free to reach out to us anytime,Contact us without hesitation.</p>
-                    <i class="fas fa-map-marker-alt"></i> <a href="#" style="color: white;">Europe</a>
-                </p>
-                <p style="color: white;">
-                    <i class="fas fa-phone"></i> <a href="#" style="color: white;">+111</a>
-                </p>
-                <p style="color: white;">
-                    <i class="fas fa-envelope"></i> <a href="#" style="color: white;">cs@ecoherocargo.world</a>
-                </p>
-               <p style="color: white;">
-                    <i class="fas fa-clock" style="color: white;"></i> <a href="#" style="color: white;">Office Hour</a>
-                </p>
-
-                
-
-               
-            </div>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">cargo@ecohero.world</span>
+            </li>
+          </ul>
         </div>
     </div>
 </div>    
      
 </footer>
-<footer id="news" style="background-color: #0d6d69; padding: 5px;">
-            <div class="container">
-                <div class="row">        
-                    <div class="col-lg-3">
-                        <div class="container text-center" style="color: #FFFFFF;">
-                            <p><strong>©2024 EcoHero. All Rights Reserved.</strong></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+
+<!-- Copyright -->
+ <div class="text-center p-3" style="background-color: #007374; padding: 5px; border-top: 1px solid white;">
+    <a class="text-white" href="https://mdbootstrap.com/"> ©2023. EcoHero Cargo.All Rights Reserved.</a>
+</div>
+
+<!-- EndCopyright -->
+
+
+   
+
  
 
    
@@ -195,7 +205,7 @@
         display: flex; /* Mengatur tata letak item menjadi flexbox */
         justify-content: flex-start; /* Mengatur penyebaran item dari kiri ke kanan */
         align-items: left; /* Mengatur penyejajaran item secara vertikal */
-        margin-top: 20px; /* Menambahkan ruang di atas ikon-ikon */
+        margin-top: 15px; /* Menambahkan ruang di atas ikon-ikon */
         
     }
 
@@ -215,7 +225,7 @@
 
     /* Add your custom styles here */
     footer {
-        background-color: #1e8183;
+        background-color: #007374;
         color: #fff;
         padding: 50px 0;
         text-align: left;
@@ -260,8 +270,8 @@
 
      /* Efek hover pada tautan di dalam elemen navigasi */
     .footer-widget a:hover {
-        color: #000; /* Ubah warna teks saat hover */
-        text-decoration: underline; /* Tambahkan garis bawah saat hover */
+        color: black; /* Ubah warna teks saat hover */
+        text-shadow: black; /* Tambahkan garis bawah saat hover */
        
     }
 
@@ -290,12 +300,12 @@
 /* Menyesuaikan ukuran font dalam footer */
 
 #newsletter {
-    font-size: 20px; /* Misalnya, ukuran font 16 piksel */
+    font-size: 16px; /* Misalnya, ukuran font 16 piksel */
 }
 
 /* Jika ingin memperbesar ukuran font pada seluruh elemen dalam footer */
 #news * {
-    font-size: 15px; /* Misalnya, ukuran font 16 piksel */
+    font-size: 16px; /* Misalnya, ukuran font 16 piksel */
 }
 
 
