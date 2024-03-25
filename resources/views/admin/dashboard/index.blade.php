@@ -46,42 +46,44 @@
                         </div>
                     </div>
 
-                    <!-- ./col -->
+                <!-- ./col -->
 
-                  <div class="col-lg-3 col-md-6 col-sm-12">
-                    <!-- small box -->
-                    <div class="small-box bg-success">
-                        <div class="inner">
-                            <h3>{{ $amountOfData }}</h3>
-                            <p>Amount of Data</p> <!-- Anda bisa mengganti "Data" dengan kata yang relevan -->
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <!-- small box -->
+                        <div class="small-box bg-success">
+                            <div class="inner">
+                                <h3>{{ $amountOfData }}</h3>
+                                <p>Amount of Data</p> <!-- Anda bisa mengganti "Data" dengan kata yang relevan -->
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-stats-bars"></i>
+                                <i class="fas fa-database"></i> <!-- Icon untuk melambangkan data -->
+                            </div>
+                            <a href="{{ route('admin.tracking.data') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
-                        <div class="icon">
-                            <i class="ion ion-stats-bars"></i>
-                            <i class="fas fa-database"></i> <!-- Icon untuk melambangkan data -->
-                        </div>
-                        <a href="{{ route('admin.tracking.data') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
-                </div>
 
-                    <!-- ./col -->
+                <!-- ./col -->
 
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <!-- small box -->
-                    <div class="small-box bg-warning">
-                        <div class="inner">
-                            <h3 style="color: white;">{{ $dataProcessing }}</h3>
-                            <p style="color: white;">Data Processing</p> 
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <!-- small box -->
+                        <div class="small-box bg-warning">
+                            <div class="inner">
+                                <h3 style="color: white;">{{ $dataProcessing }}</h3>
+                                <p style="color: white;">Data Processing</p> 
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-stats-bars"></i>
+                                <i class="fas fa-cog"></i> <!-- Ikon yang merepresentasikan proses -->
+                            </div>
+                                <a href="{{ route('admin.tracking.data') }}" class="small-box-footer">
+                                    <span class="text-white">More info</span>
+                                    <i class="fas fa-arrow-circle-right text-white"></i>
+                                </a>
                         </div>
-                        <div class="icon">
-                            <i class="ion ion-stats-bars"></i>
-                            <i class="fas fa-cog"></i> <!-- Ikon yang merepresentasikan proses -->
-                        </div>
-                       <a href="{{ route('admin.tracking.data') }}" class="small-box-footer" style="color: white;">More info <i class="fas fa-arrow-circle-right"></i></a>
-
                     </div>
-                </div>
 
-                    <!-- ./col -->
+                <!-- ./col -->
                 </div>
                 <!-- /.row -->
                 <!-- /.row (main row) -->
