@@ -35,7 +35,7 @@
 <div class="content-wrapper" style="margin-bottom: 10px; margin-top:50px; position: relative;">
    <div class="image">
         <!-- Gambar pertama -->
-        <img src="{{ asset('./assets/dist/img/Delive.png') }}" class="img-fluid" style="width: 689px; max-width: 100%; height: auto; position: absolute; right: auto; bottom: 0;">
+        <img src="{{ asset('./assets/dist/img/Delive.png') }}" class="img-fluid" style="width: 680px; max-width: 100%; height: auto; position: absolute; right: auto; bottom: 0;">
 
         <!-- Gambar kedua -->
         <img src="{{ asset('./assets/dist/img/Order.png') }}" class="img-fluid d-none d-md-inline" style="width: 500px; max-width: 100%; height: auto; position: absolute; right: 20px; bottom: 0;">

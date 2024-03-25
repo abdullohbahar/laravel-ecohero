@@ -32,49 +32,55 @@
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
-                    <div class="col-lg-3 col-6">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
                         <!-- small box -->
-                       <!-- small box -->
                         <div class="small-box bg-danger">
                             <div class="inner">
-                                <h3>595</h3> <!-- Ganti dengan jumlah total pelanggan -->
-                                <p>Total Customers</p> <!-- Ganti dengan judul yang sesuai -->
+                                <h3>{{ $totalCustomer }}</h3> <!-- Mengambil jumlah total pelanggan dari database -->
+                                <p>Total Customers</p>
                             </div>
                             <div class="icon">
-                                <i class="fas fa-users"></i> <!-- Ganti ikon dengan ikon pelanggan -->
+                                <i class="fas fa-users"></i>
                             </div>
-                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="{{ route('admin.customer') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
+
                     <!-- ./col -->
-                    <div class="col-lg-3 col-6">
-                       <!-- small box -->
-                        <div class="small-box bg-success">
-                            <div class="inner">
-                                <h3>433</h3>
-                                <p>Amount of Data</p> <!-- Anda bisa mengganti "Data" dengan kata yang relevan -->
-                            </div>
-                            <div class="icon">
-                                <i class="ion ion-stats-bars"></i>
-                                <i class="fas fa-database"></i> <!-- Icon untuk melambangkan data -->
-                            </div>
-                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+
+                  <div class="col-lg-3 col-md-6 col-sm-12">
+                    <!-- small box -->
+                    <div class="small-box bg-success">
+                        <div class="inner">
+                            <h3>{{ $amountOfData }}</h3>
+                            <p>Amount of Data</p> <!-- Anda bisa mengganti "Data" dengan kata yang relevan -->
                         </div>
+                        <div class="icon">
+                            <i class="ion ion-stats-bars"></i>
+                            <i class="fas fa-database"></i> <!-- Icon untuk melambangkan data -->
+                        </div>
+                        <a href="{{ route('admin.tracking.data') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
+                </div>
+
                     <!-- ./col -->
-                    <div class="col-lg-3 col-6">
-                        <!-- small box -->
-                        <div class="small-box bg-warning">
-                            <div class="inner">
-                                <h3>000</h3>
-                                <p>Data Processing</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fas fa-cog"></i> <!-- Ikon yang merepresentasikan proses -->
-                            </div>
-                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <!-- small box -->
+                    <div class="small-box bg-warning">
+                        <div class="inner">
+                            <h3 style="color: white;">{{ $dataProcessing }}</h3>
+                            <p style="color: white;">Data Processing</p> 
                         </div>
+                        <div class="icon">
+                            <i class="ion ion-stats-bars"></i>
+                            <i class="fas fa-cog"></i> <!-- Ikon yang merepresentasikan proses -->
+                        </div>
+                       <a href="{{ route('admin.tracking.data') }}" class="small-box-footer" style="color: white;">More info <i class="fas fa-arrow-circle-right"></i></a>
+
                     </div>
+                </div>
+
                     <!-- ./col -->
                 </div>
                 <!-- /.row -->

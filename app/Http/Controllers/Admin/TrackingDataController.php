@@ -7,6 +7,11 @@ use App\Models\Customer;
 use App\Models\Timeline;
 use App\Models\TrackingData;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+
+
+
 
 class TrackingDataController extends Controller
 {
@@ -32,6 +37,32 @@ class TrackingDataController extends Controller
         ];
 
         return view('admin.tracking-data.create', $data);
+    }
+
+
+    public function up()
+    {
+        Schema::create('data_counts', function (Blueprint $table) {
+            $table->id();
+            $table->integer('count')->default(0); // Kolom untuk menyimpan jumlah data
+            $table->timestamps();
+        });
+    }
+
+        public function dataDetail()
+    {
+     
+        return view('data_detail', compact('totalData'));
+    }
+
+  
+   
+
+
+
+    public function down()
+    {
+        Schema::dropIfExists('data_counts');
     }
 
     public function getCustomer($id)
