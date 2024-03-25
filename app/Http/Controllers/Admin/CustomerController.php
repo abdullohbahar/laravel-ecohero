@@ -29,6 +29,20 @@ class CustomerController extends Controller
         return view('admin.customer.create', $data);
     }
 
+
+     public function detail()
+                {
+                    $totalCustomers = Customer::count(); // Menghitung jumlah total pelanggan
+                    return view('admin.customer.detail', compact('totalCustomers'));
+                     $customers = Customer::all(); // Mendapatkan semua data pelanggan
+                    return view('customer.detail', compact('customers'));
+                }
+    
+
+   
+
+
+
     public function store(Request $request)
     {
         $request->validate([

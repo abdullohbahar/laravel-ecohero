@@ -168,14 +168,15 @@
         </script>
     @elseif(old('modal') == 'edit')
         <script>
-            var jam = '{{ old('editJam') }}'
-            flatpickr('#editJam', {
-                enableTime: true,
-                noCalendar: true,
-                dateFormat: "H:i",
-                time_24hr: true,
-                defaultDate: jam // Nilai default, bisa diubah sesuai kebutuhan
-            });
+        var jam = `{{ old('editJam') }}`;
+        flatpickr('#editJam', {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+            time_24hr: true,
+            defaultDate: jam // Nilai default, bisa diubah sesuai kebutuhan
+        });
+
 
             $("#edit").modal("show")
         </script>

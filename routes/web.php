@@ -9,6 +9,16 @@ use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\Landing\GuestController;
 use Illuminate\Support\Facades\Route;
 
+
+
+
+
+
+
+
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,6 +44,8 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middle
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardAdminController::class, 'index'])->name('admin.dashboard');
 
+    
+
     Route::prefix('tracking-data')->group(function () {
         Route::get('/', [TrackingDataController::class, 'index'])->name('admin.tracking.data');
         Route::get('/create', [TrackingDataController::class, 'create'])->name('admin.create.tracking.data');
@@ -41,12 +53,22 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         Route::get('/edit/{id}', [TrackingDataController::class, 'edit'])->name('admin.edit.tracking.data');
         Route::put('/update/{id}', [TrackingDataController::class, 'update'])->name('admin.update.tracking.data');
 
+        Route::get('/customer/detail', [CustomerController::class, 'detail'])->name('customer.detail');
+
+
+
+       
+
+
         Route::get('/timeline/{id}', [TrackingDataController::class, 'timeline'])->name('admin.timeline');
         Route::post('/store-timeline/{id}', [TrackingDataController::class, 'storeTimeline'])->name('admin.store.timeline');
         Route::put('/update-timeline', [TrackingDataController::class, 'updateTimeline'])->name('admin.update.timeline');
         Route::delete('/destroy-timeline/{id}', [TrackingDataController::class, 'destroyTimeline'])->name('admin.destroy.timeline');
 
         Route::get('/get-customer/{id}', [TrackingDataController::class, 'getCustomer']);
+
+        
+  
     });
 
     Route::prefix('customer')->group(function () {
@@ -56,6 +78,9 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         Route::get('/edit/{id}', [CustomerController::class, 'edit'])->name('admin.edit.customer');
         Route::put('/update/{id}', [CustomerController::class, 'update'])->name('admin.update.customer');
         Route::delete('/destroy/{id}', [CustomerController::class, 'destroy'])->name('admin.destroy.tracking.data');
+        Route::get('/customers', [CustomerController::class, 'index'])->name('customer.index');
+        Route::get('/customers/detail', [CustomerController::class, 'detail'])->name('.detail');
+
     });
 
     Route::prefix('user')->group(function () {
@@ -66,4 +91,6 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         Route::put('/update/{id}', [UserController::class, 'update'])->name('admin.update.user');
         Route::delete('/destroy/{id}', [UserController::class, 'destroy'])->name('admin.destroy.user');
     });
+
+
 });
