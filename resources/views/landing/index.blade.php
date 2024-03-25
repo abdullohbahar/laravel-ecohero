@@ -24,9 +24,6 @@
             padding-right: 5%;
         }
         
-
-
-        
    </style>
 @endpush
 
