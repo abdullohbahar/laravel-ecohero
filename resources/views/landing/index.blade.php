@@ -320,7 +320,6 @@
 @push('addons-js')
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Ganti 'targetId' dengan ID elemen yang ingin di-scroll
             var targetId = "scroll";
 
             // Cek apakah elemen dengan ID yang ditentukan ada di halaman
