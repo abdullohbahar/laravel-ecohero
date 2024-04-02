@@ -28,38 +28,33 @@
 
 @section('content')
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper" style="margin-bottom: 10px; margin-top:50px; position: relative;">
-        <div class="image">
-            <!-- Gambar pertama -->
-            <img src="{{ asset('./assets/dist/img/Delive.png') }}" class="img-fluid"
-                style="width: 680px; max-width: 100%; height: auto; position: absolute; right: auto; bottom: 0;">
-
-            <!-- Gambar kedua -->
-            <img src="{{ asset('./assets/dist/img/Order.png') }}" class="img-fluid d-none d-md-inline"
-                style="width: 500px; max-width: 100%; height: auto; position: absolute; right: 20px; bottom: 0;">
-        </div>
+    <div class="container-fluid">
         <!-- Main content -->
-        <div class="text-center">
-            <div class="col-md-5 p-lg-5 mx-auto my-5">
-                <h1 class="display-4" style="color: #008080; font-weight: bold; font-family: 'Calibri';">Trace &amp; Track
-                </h1>
-                <p class="lead font-weight-normal" style="font-family: 'Roboto'; font-size: 20px;">
-                    Check your shipment with the receipt number directly and accurately
-                    .</p>
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                    <div class="col-md-5 p-lg-5 mx-auto my-5">
+                        <h1 class="display-4" style="color: #008080; font-weight: bold; font-family: 'Calibri';">Trace &amp;
+                            Track
+                        </h1>
+                        <p class="lead font-weight-normal" style="font-family: 'Roboto'; font-size: 20px;">
+                            Check your shipment with the receipt number directly and accurately
+                            .</p>
 
-                <form action="" method="GET" style="max-width: 80%; margin: auto;">
-                    <input type="resi" name="resi" value="{{ $resi }}" class="form-control" id="resi"
-                        style="width: 100%; height: 70%; text-align: center; font-size: 16px;"
-                        placeholder="Input your Resi Number">
-                    <br>
-                    <button type="submit" id="search" class="btn btn-primary"
-                        style="background-color: #0F7567; border-radius: 20px; width: 100%; font-size: 16px;">Search</button>
-                </form>
+                        <form action="" method="GET" style="max-width: 100%; margin: auto;">
+                            <input type="resi" name="resi" value="{{ $resi }}" class="form-control"
+                                id="resi" style="width: 100%; height: 70%; text-align: center; font-size: 16px;"
+                                placeholder="Input your Resi Number">
+                            <br>
+                            <button type="submit" id="search" class="btn btn-primary"
+                                style="background-color: #0F7567; border-radius: 20px; width: 100%; font-size: 16px;">Search</button>
+                        </form>
 
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
 
     <div>
         @if ($resi)
@@ -74,6 +69,20 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+
+    <div class="row image">
+        <div class="col-sm-12 col-md-6">
+            <!-- Gambar pertama -->
+            <img src="{{ asset('./assets/dist/img/Delive.png') }}" class="img-fluid"
+                style="width: 680px; max-width: 100%; height: auto; right: auto; bottom: 0;">
+        </div>
+        <div class="col-sm-0 col-md-6">
+
+            <!-- Gambar kedua -->
+            <img src="{{ asset('./assets/dist/img/Order.png') }}" class="img-fluid d-none d-md-inline"
+                style="width: 680px; max-width: 100%; height: auto; right: 20px; bottom: 0;">
+        </div>
+    </div>
 
 
 
@@ -97,7 +106,7 @@
             <div class="row"
                 style="@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');">
 
-                <div class="col-lg-3 col-md-6">
+                <div class="col-sm-12 col-md-4">
                     <div class="footer-widget" style="text-align: left;">
                         <h4 style="color: white;">About Our Company</h4>
                         <br>
@@ -113,28 +122,6 @@
                         <div class="elementor-widget-container">
                             <ul class="elementor-icon-list-items elementor-inline-items">
                                 <!-- Ikon-ikon Anda disini -->
-                                <a href="https://www.facebook.com/Ecoheroworld/" target="_blank"
-                                    class="elementor-icon-list-item elementor-inline-item">
-                                    <span class="elementor-icon-list-icon">
-                                        <svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook-square"
-                                            viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z">
-                                            </path>
-                                        </svg> </span>
-                                    <span class="elementor-icon-list-text"></span>
-                                </a>
-                                <a href="https://www.bing.com/ck/a?!&&p=7299b8827d5d5f06JmltdHM9MTcxMDM3NDQwMCZpZ3VpZD0wOTM2OWUyMi00NGQ2LTY0ZjctM2E4Ny04ZWIxNDU4MDY1YTQmaW5zaWQ9NTMwMA&ptn=3&ver=2&hsh=3&fclid=09369e22-44d6-64f7-3a87-8eb1458065a4&psq=twitter+ecohero.world&u=a1aHR0cHM6Ly90d2l0dGVyLmNvbS9lY2hvd29ybGRjbw&ntb=1"
-                                    target="_blank" class="elementor-icon-list-item elementor-inline-item">
-                                    <span class="elementor-icon-list-icon">
-                                        <svg aria-hidden="true" class="e-font-icon-svg e-fab-twitter-square"
-                                            viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z">
-                                            </path>
-                                        </svg> </span>
-                                    <span class="elementor-icon-list-text"></span>
-                                </a>
                                 <a href="https://www.linkedin.com/company/eco-hero-world" target="_blank"
                                     class="elementor-icon-list-item elementor-inline-item">
                                     <span class="elementor-icon-list-icon">
@@ -162,7 +149,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6">
+                <div class="col-sm-12 col-md-4">
                     <div class="footer-widget" style="text-align: left; font-family: 'Lato'sans-serif; font-size: 14px;">
                         <h4 style="color: white;">Navigation</h4>
                         <br>
@@ -197,7 +184,7 @@
 
 
 
-                <div class="col-lg-3 col-md-6">
+                <div class="col-sm-12 col-md-4">
                     <div class="footer-widget" style="text-align: left;">
                         <h4 style="color: white;">Contact Us</h4>
                         <br>

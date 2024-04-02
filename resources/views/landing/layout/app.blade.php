@@ -69,7 +69,7 @@
 
 <body class="hold-transition layout-top-nav">
     <div class="wrapper" style="line-height:normal;">
-        <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+        <nav class="main-header sticky-top navbar navbar-expand-md navbar-light navbar-white">
             <div class="container d-flex justify-content-between align-items-center">
                 <a href="index.php" class="navbar-brand">
                     <img src="{{ asset('./assets/dist/img/ecohero.png') }}" alt="AdminLTE Logo">
