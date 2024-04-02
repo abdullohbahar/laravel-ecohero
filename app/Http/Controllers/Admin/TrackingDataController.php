@@ -49,14 +49,14 @@ class TrackingDataController extends Controller
         });
     }
 
-        public function dataDetail()
+    public function dataDetail()
     {
-     
+
         return view('data_detail', compact('totalData'));
     }
 
-  
-   
+
+
 
 
 
@@ -124,7 +124,7 @@ class TrackingDataController extends Controller
             'tracking_id' => $formattedId,
         ]);
 
-        return to_route('admin.tracking.data')->with('success', 'Berhasil');
+        return to_route('admin.tracking.data')->with('success', 'Success');
     }
 
     public function edit($id)
@@ -168,7 +168,7 @@ class TrackingDataController extends Controller
             'destination' => $request->destination,
         ]);
 
-        return to_route('admin.tracking.data')->with('success', 'Berhasil Mengubah Data Tracking');
+        return to_route('admin.tracking.data')->with('success', 'Success');
     }
 
     public function timeline($id)
@@ -212,7 +212,7 @@ class TrackingDataController extends Controller
             'tujuan' => $request->tujuan,
         ]);
 
-        return redirect()->back()->with('success', 'Berhasil menambah timeline');
+        return redirect()->back()->with('success', 'Success');
     }
 
     public function updateTimeline(Request $request)
@@ -239,7 +239,7 @@ class TrackingDataController extends Controller
             'tujuan' => $request->editTujuan,
         ]);
 
-        return redirect()->back()->with('success', 'Berhasil mengubah timeline');
+        return redirect()->back()->with('success', 'Success');
     }
 
     public function destroyTimeline($id)
@@ -252,14 +252,14 @@ class TrackingDataController extends Controller
 
             // Mengembalikan respons JSON sukses dengan status 200
             return response()->json([
-                'message' => 'Berhasil Menghapus Data',
+                'message' => 'Success',
                 'code' => 200,
                 'error' => false
             ]);
         } catch (\Exception $e) {
             // Menangkap exception jika terjadi kesalahan
             return response()->json([
-                'message' => 'Gagal Menghapus Data',
+                'message' => 'Failed',
                 'code' => 500,
                 'error' => $e->getMessage()
             ]);

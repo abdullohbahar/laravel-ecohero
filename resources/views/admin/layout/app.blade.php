@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('./assets/plugins/fontawesome-free/css/all.min.css') }}">
-     <!-- Font Awesome Icons -->
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{{ asset('./assets/dist/icon.png') }}" rel="icon">
     <!-- Tempusdominus Bootstrap 4 -->
     <link rel="stylesheet"
@@ -76,7 +76,7 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index.php" class="brand-link">
+            <a href="" class="brand-link">
                 <img src="{{ asset('./assets/dist/img/icon.png') }}" alt="AdminLTE Logo"
                     class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">Tracking App</span>
@@ -104,7 +104,7 @@
                                 class="nav-link {{ $active == 'data-pelanggan' ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-users"></i>
                                 <p>
-                                    Data Pelanggan
+                                    Customer Data
                                 </p>
                             </a>
                         </li>
@@ -222,7 +222,7 @@
     </script>
 
     @if (session()->has('success'))
-            <script>
+        <script>
             const Toast = Swal.mixin({
                 toast: true,
                 position: 'top-end',
@@ -237,15 +237,15 @@
         </script>
 
 
-            Toast.fire({
-                icon: 'success',
-                title: '{{ session('success') }}'
-            })
+        Toast.fire({
+        icon: 'success',
+        title: '{{ session('success') }}'
+        })
         </script>
     @endif
 
     @if (session()->has('error'))
-       <script>
+        <script>
             const Toast = Swal.mixin({
                 toast: true,
                 position: 'top-end',
@@ -263,7 +263,6 @@
                 title: "{{ session('error') }}"
             });
         </script>
-
     @endif
     @stack('addons-js')
 </body>

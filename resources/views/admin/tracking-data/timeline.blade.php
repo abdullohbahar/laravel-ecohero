@@ -1,7 +1,7 @@
 @extends('admin.layout.app')
 
 @section('title')
-    Update Lokasi Tracking
+    Update Location Tracking
 @endsection
 
 @push('addons-css')
@@ -11,7 +11,7 @@
 
 @section('content')
     @php
-        \Carbon\Carbon::setLocale('id');
+        \Carbon\Carbon::setLocale('en');
     @endphp
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -20,12 +20,13 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h3>Update Lokasi | No Resi: {{ $trackingData->resi_number }}</h3>
+                        <h3>Update Location | Resi Number: {{ $trackingData->resi_number }}</h3>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Update Lokasi | No Resi: {{ $trackingData->resi_number }}
+                            <li class="breadcrumb-item active">Update Location | Resi Number:
+                                {{ $trackingData->resi_number }}
                             </li>
                         </ol>
                     </div>
@@ -45,7 +46,7 @@
                                     <thead>
                                         <tr>
                                             <td colspan="2">
-                                                <b>Nomor Resi: <span id="noResi">{{ $trackingData->resi_number }}</span>
+                                                <b>Resi Number: <span id="noResi">{{ $trackingData->resi_number }}</span>
                                                 </b>
                                             </td>
                                         </tr>
@@ -60,7 +61,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Tanggal Kirim</td>
+                                            <td>Delivery Date</td>
                                             <td>
                                                 <b>
                                                     <span id="sent_date">
@@ -69,7 +70,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Nama Pengirim</td>
+                                            <td>Sender Name</td>
                                             <td>
                                                 <b>
                                                     <span id="sent_date">{{ $trackingData->customer->first_name }}
@@ -78,7 +79,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Asal</td>
+                                            <td>Origin</td>
                                             <td>
                                                 <b>
                                                     <span id="sent_date">{{ $trackingData->origin }}</span>
@@ -86,7 +87,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Tujuan</td>
+                                            <td>Destination</td>
                                             <td>
                                                 <b>
                                                     <span id="sent_date">{{ $trackingData->destination }}</span>
@@ -94,7 +95,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Status Terbaru</td>
+                                            <td>Current Status</td>
                                             <td>
                                                 <b>
                                                     <span id="sent_date"
@@ -112,7 +113,7 @@
                         <div class="card">
                             <!-- /.card-header -->
                             <div class="card-header">
-                                <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#add">Tambah
+                                <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#add">Add
                                     Timeline</button>
                             </div>
                             <div class="card-body">
@@ -142,7 +143,7 @@
                                             </div>
                                         </li>
                                     @empty
-                                        <h1>Belum ada Timeline</h1>
+                                        <h1>No Timeline yet</h1>
                                     @endforelse
                                 </ul>
                             </div>
@@ -168,14 +169,14 @@
         </script>
     @elseif(old('modal') == 'edit')
         <script>
-        var jam = `{{ old('editJam') }}`;
-        flatpickr('#editJam', {
-            enableTime: true,
-            noCalendar: true,
-            dateFormat: "H:i",
-            time_24hr: true,
-            defaultDate: jam // Nilai default, bisa diubah sesuai kebutuhan
-        });
+            var jam = `{{ old('editJam') }}`;
+            flatpickr('#editJam', {
+                enableTime: true,
+                noCalendar: true,
+                dateFormat: "H:i",
+                time_24hr: true,
+                defaultDate: jam // Nilai default, bisa diubah sesuai kebutuhan
+            });
 
 
             $("#edit").modal("show")

@@ -44,12 +44,13 @@
                 <h1 class="display-4" style="color: #008080; font-weight: bold; font-family: 'Calibri';">Trace &amp; Track
                 </h1>
                 <p class="lead font-weight-normal" style="font-family: 'Roboto'; font-size: 20px;">
-                    Cek pengirimanmu dengan nomor resi secara langsung dan akurat.</p>
+                    Check your shipment with the receipt number directly and accurately
+                    .</p>
 
                 <form action="" method="GET" style="max-width: 80%; margin: auto;">
                     <input type="resi" name="resi" value="{{ $resi }}" class="form-control" id="resi"
                         style="width: 100%; height: 70%; text-align: center; font-size: 16px;"
-                        placeholder="Input Nomor Resi Anda">
+                        placeholder="Input your Resi Number">
                     <br>
                     <button type="submit" id="search" class="btn btn-primary"
                         style="background-color: #0F7567; border-radius: 20px; width: 100%; font-size: 16px;">Search</button>
@@ -66,7 +67,7 @@
                 @include('landing.result')
             @else
                 <center>
-                    <h3 id="scroll"><b>Nomor Resi Tidak Ditemukan</b></h3>
+                    <h3 id="scroll"><b>Resi Number Not Found</b></h3>
                 </center>
             @endif
         @endif
@@ -200,7 +201,6 @@
                     <div class="footer-widget" style="text-align: left;">
                         <h4 style="color: white;">Contact Us</h4>
                         <br>
-                        <p>Feel free to reach out to us anytime, Contact us without hesitation.</p>
                         <ul class="fa-ul" style="margin-left: 1.65em;">
                             <li class="mb-3">
                                 <span class="fa-li"><i class="fas fa-map-marker-alt"></i></span><span class="ms-2">160

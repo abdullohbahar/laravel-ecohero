@@ -1,7 +1,7 @@
 @extends('admin.layout.app')
 
 @section('title')
-    Tambah Data Pelanggan
+    Add Customer
 @endsection
 
 @push('addons-css')
@@ -15,12 +15,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Tambah Data Pelanggan</h1>
+                        <h1 class="m-0">Add Customer</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Tambah Data Pelanggan</li>
+                            <li class="breadcrumb-item active">Add Customer</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -40,7 +40,7 @@
                                     @csrf
                                     <div class="row">
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="">Nama Awal</label>
+                                            <label for="">First Name</label>
                                             <input type="text" name="first_name" value="{{ old('first_name') }}"
                                                 class="form-control @error('first_name') is-invalid @enderror"
                                                 id="">
@@ -51,7 +51,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="">Nama Belakang</label>
+                                            <label for="">Last Name</label>
                                             <input type="text" name="last_name" value="{{ old('last_name') }}"
                                                 class="form-control @error('last_name') is-invalid @enderror"
                                                 id="">
@@ -72,7 +72,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="">Nomor HP</label>
+                                            <label for="">Phone Number</label>
                                             <input type="text" name="phone_number" value="{{ old('phone_number') }}"
                                                 class="form-control @error('phone_number') is-invalid @enderror"
                                                 id="">
@@ -83,7 +83,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="">Negara</label>
+                                            <label for="">Country</label>
                                             <input type="text" name="country" value="{{ old('country') }}"
                                                 class="form-control @error('country') is-invalid @enderror" id="">
                                             @error('country')
@@ -93,7 +93,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="">Jalan</label>
+                                            <label for="">Street Address</label>
                                             <input type="text" name="street_address" value="{{ old('street_address') }}"
                                                 class="form-control @error('street_address') is-invalid @enderror"
                                                 id="">
@@ -104,7 +104,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="">Kota</label>
+                                            <label for="">City / Town</label>
                                             <input type="text" name="town" value="{{ old('town') }}"
                                                 class="form-control @error('town') is-invalid @enderror" id="">
                                             @error('town')
@@ -114,7 +114,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="">Provinsi</label>
+                                            <label for="">Province</label>
                                             <input type="text" name="province" value="{{ old('province') }}"
                                                 class="form-control @error('province') is-invalid @enderror" id="">
                                             @error('province')
@@ -124,7 +124,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="">Kode Pos</label>
+                                            <label for="">Post Code / ZIP Code</label>
                                             <input type="text" name="post_code" value="{{ old('post_code') }}"
                                                 class="form-control @error('post_code') is-invalid @enderror"
                                                 id="">
@@ -137,7 +137,7 @@
                                     </div>
                                     <div class="row mt-3">
                                         <div class="col-sm-12 col-md-12 col-lg-6">
-                                            <button class="btn btn-success" style="width: 100%">Simpan</button>
+                                            <button class="btn btn-success" style="width: 100%">Submit</button>
                                         </div>
                                     </div>
                                 </form>

@@ -1,7 +1,7 @@
 @extends('admin.layout.app')
 
 @section('title')
-    Ubah Data User
+    Edit User
 @endsection
 
 @push('addons-css')
@@ -16,12 +16,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Ubah Data User</h1>
+                        <h1 class="m-0">Edit User</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Ubah Data User</li>
+                            <li class="breadcrumb-item active">Edit User</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -64,8 +64,9 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="">Password <small><i style="color: red">Kosongkan jika tidak
-                                                        ingin mengubah password</i></small></label>
+                                            <label for="">Password <small><i style="color: red">Leave blank if you
+                                                        do not
+                                                        want to change the password</i></small></label>
                                             <input type="password" name="password"
                                                 class="form-control @error('password') is-invalid @enderror" id="password">
                                             @error('password')
@@ -77,8 +78,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-12 col-md-6 mt-3">
-                                            <button type="submit" style="width: 100%" class="btn btn-success">Ubah
-                                                User</button>
+                                            <button type="submit" style="width: 100%" class="btn btn-success">Edit</button>
                                         </div>
                                     </div>
                                 </form>

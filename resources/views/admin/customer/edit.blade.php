@@ -1,7 +1,7 @@
 @extends('admin.layout.app')
 
 @section('title')
-    Ubah Data Pelanggan
+    Edit Customer
 @endsection
 
 @push('addons-css')
@@ -15,12 +15,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Ubah Data Pelanggan</h1>
+                        <h1 class="m-0">Edit Customer</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Ubah Data Pelanggan</li>
+                            <li class="breadcrumb-item active">Edit Customer</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -41,7 +41,7 @@
                                     @method('PUT')
                                     <div class="row">
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="">Nama Awal</label>
+                                            <label for="">First Name</label>
                                             <input type="text" name="first_name"
                                                 value="{{ old('first_name', $customer->first_name) }}"
                                                 class="form-control @error('first_name') is-invalid @enderror"
@@ -53,7 +53,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="">Nama Belakang</label>
+                                            <label for="">Last Name</label>
                                             <input type="text" name="last_name"
                                                 value="{{ old('last_name', $customer->last_name) }}"
                                                 class="form-control @error('last_name') is-invalid @enderror"
@@ -76,7 +76,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="">Nomor HP</label>
+                                            <label for="">Phone Number</label>
                                             <input type="text" name="phone_number"
                                                 value="{{ old('phone_number', $customer->phone_number) }}"
                                                 class="form-control @error('phone_number') is-invalid @enderror"
@@ -88,7 +88,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="">Negara</label>
+                                            <label for="">Country</label>
                                             <input type="text" name="country"
                                                 value="{{ old('country', $customer->country) }}"
                                                 class="form-control @error('country') is-invalid @enderror" id="">
@@ -99,7 +99,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="">Jalan</label>
+                                            <label for="">Street Address</label>
                                             <input type="text" name="street_address"
                                                 value="{{ old('street_address', $customer->street_address) }}"
                                                 class="form-control @error('street_address') is-invalid @enderror"
@@ -111,7 +111,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="">Kota</label>
+                                            <label for="">City / Town</label>
                                             <input type="text" name="town" value="{{ old('town', $customer->town) }}"
                                                 class="form-control @error('town') is-invalid @enderror" id="">
                                             @error('town')
@@ -121,7 +121,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="">Provinsi</label>
+                                            <label for="">Province</label>
                                             <input type="text" name="province"
                                                 value="{{ old('province', $customer->province) }}"
                                                 class="form-control @error('province') is-invalid @enderror" id="">
@@ -132,7 +132,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label for="">Kode Pos</label>
+                                            <label for="">Post Code / ZIP Code</label>
                                             <input type="text" name="post_code"
                                                 value="{{ old('post_code', $customer->post_code) }}"
                                                 class="form-control @error('post_code') is-invalid @enderror"
@@ -146,7 +146,7 @@
                                     </div>
                                     <div class="row mt-3">
                                         <div class="col-sm-12 col-md-12 col-lg-6">
-                                            <button class="btn btn-success" style="width: 100%">Ubah</button>
+                                            <button class="btn btn-success" style="width: 100%">Edit</button>
                                         </div>
                                     </div>
                                 </form>

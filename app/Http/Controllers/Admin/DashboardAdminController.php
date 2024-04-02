@@ -15,7 +15,7 @@ class DashboardAdminController extends Controller
     {
         $totalCustomer = Customer::count();
         $amountOfData = TrackingData::count();
-        $dataProcessing = TrackingData::where('status',null)->count();
+        $dataProcessing = TrackingData::where('status', null)->count();
 
         $data = [
             'active' => 'dashboard',
@@ -23,16 +23,8 @@ class DashboardAdminController extends Controller
             'amountOfData' => $amountOfData,
             'dataProcessing' => $dataProcessing
         ];
-        
+
 
         return view('admin.dashboard.index', $data);
     }
-
-    
-
-
 }
-
-
-
-

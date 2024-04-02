@@ -1,7 +1,7 @@
 @extends('admin.layout.app')
 
 @section('title')
-    Data Pelanggan
+    Customer Data
 @endsection
 
 @push('addons-css')
@@ -16,12 +16,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Data Pelanggan</h1>
+                        <h1 class="m-0">Customer Data</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Data Pelanggan</li>
+                            <li class="breadcrumb-item active">Customer Data</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -37,7 +37,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <a href="{{ route('admin.create.customer') }}" class="btn btn-primary">
-                                    Tambah data</a>
+                                    Add New</a>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -45,10 +45,10 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama Pengirim</th>
+                                            <th>Sender Name</th>
                                             <th>Email</th>
-                                            <th>Nomor HP</th>
-                                            <th>Alamat</th>
+                                            <th>Phone Number</th>
+                                            <th>Address</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -73,11 +73,11 @@
                                                     <div class="dropdown">
                                                         <button class="btn btn-secondary dropdown-toggle" type="button"
                                                             data-toggle="dropdown" aria-expanded="false">
-                                                            Aksi
+                                                            Action
                                                         </button>
                                                         <div class="dropdown-menu">
                                                             <button class="dropdown-item" id="removeBtn"
-                                                                data-id="{{ $customer->id }}">Hapus</button>
+                                                                data-id="{{ $customer->id }}">Delete</button>
                                                             <a class="dropdown-item"
                                                                 href="{{ route('admin.edit.customer', $customer->id) }}">Edit</a>
                                                         </div>
@@ -123,8 +123,8 @@
             var id = $(this).data("id");
 
             Swal.fire({
-                title: 'Apakah anda yakin?',
-                text: "Data yang berhubungan akan dihapus secara permanen!",
+                title: 'Are you sure?',
+                text: "The corresponding data will be permanently deleted!",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
@@ -149,7 +149,7 @@
                             } else if (response.code == 500) {
                                 Swal.fire({
                                     icon: 'error',
-                                    title: 'Gagal!',
+                                    title: 'Failed!',
                                     text: response.message,
                                 })
                             }

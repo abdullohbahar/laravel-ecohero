@@ -37,7 +37,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <a href="{{ route('admin.create.user') }}" class="btn btn-primary">
-                                    Tambah User</a>
+                                    Add User</a>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -63,7 +63,7 @@
                                                     <div class="dropdown">
                                                         <button class="btn btn-secondary dropdown-toggle" type="button"
                                                             data-toggle="dropdown" aria-expanded="false">
-                                                            Aksi
+                                                            Action
                                                         </button>
                                                         <div class="dropdown-menu">
                                                             <a class="dropdown-item"
@@ -113,8 +113,8 @@
             var id = $(this).data("id");
 
             Swal.fire({
-                title: 'Apakah anda yakin?',
-                text: "Data yang berhubungan akan dihapus secara permanen!",
+                title: 'Are You Sure?',
+                text: "The corresponding data will be permanently deleted!",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',

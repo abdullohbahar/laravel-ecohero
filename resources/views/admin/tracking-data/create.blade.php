@@ -1,7 +1,7 @@
 @extends('admin.layout.app')
 
 @section('title')
-    Tambah Data Tracking List
+    Add New Tracking List
 @endsection
 
 @push('addons-css')
@@ -21,12 +21,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Tambah Data Tracking List</h1>
+                        <h1 class="m-0">Add New Tracking List</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Tambah Data Tracking List</li>
+                            <li class="breadcrumb-item active">Add New Tracking List</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -47,15 +47,15 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <h2>
-                                                Pelanggan
+                                                Customer
                                             </h2>
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label>Nama Pengirim</label>
+                                            <label>Customer Name</label>
                                             <select name="customer_id"
                                                 class="select2 form-control @error('customer_id') is-invalid @enderror"
                                                 style="width: 100%" id="customer" required>
-                                                <option value="">-- Pilih Pengirim --</option>
+                                                <option value="">-- Choose Customer --</option>
                                                 @foreach ($customers as $customer)
                                                     <option {{ old('customer_id') == $customer->id ? 'selected' : '' }}
                                                         value="{{ $customer->id }}">{{ $customer->first_name }}
@@ -74,32 +74,32 @@
                                                 id="email">
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label>Nomor HP</label>
+                                            <label>Phone Number</label>
                                             <input type="text" name="phone_number" class="form-control" disabled
                                                 id="phone_number">
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label>Negara</label>
+                                            <label>Country</label>
                                             <input type="text" name="" class="form-control" disabled
                                                 id="country">
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label>Jalan</label>
+                                            <label>Street Address</label>
                                             <input type="text" name="" class="form-control" disabled
                                                 id="street_address">
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label>Kota</label>
+                                            <label>Town</label>
                                             <input type="text" name="" class="form-control" disabled
                                                 id="town">
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label>Provinsi</label>
+                                            <label>Province</label>
                                             <input type="text" name="" class="form-control" disabled
                                                 id="province">
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label>Kode Pos</label>
+                                            <label>Post Code / ZIP COde</label>
                                             <input type="text" name="" class="form-control" disabled
                                                 id="post_code">
                                         </div>
@@ -107,7 +107,7 @@
                                             <hr>
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label>Nomor Resi</label>
+                                            <label>Resi Number</label>
                                             <input type="text" name="resi_number"
                                                 class="form-control @error('resi_number') is-invalid @enderror"
                                                 value="{{ old('resi_number') }}" required>
@@ -118,7 +118,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label>Kurir</label>
+                                            <label>Courier</label>
                                             <input type="text" name="courier"
                                                 class="form-control @error('courier') is-invalid @enderror"
                                                 value="{{ old('courier') }}" required>
@@ -129,7 +129,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label>Tanggal Pengiriman</label>
+                                            <label>Delivery Date</label>
                                             <input type="date" name="delivery_date"
                                                 class="form-control @error('delivery_date') is-invalid @enderror"
                                                 value="{{ old('delivery_date') }}" required>
@@ -140,7 +140,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label>Asal</label>
+                                            <label>Origin</label>
                                             <input type="text" name="origin"
                                                 class="form-control @error('origin') is-invalid @enderror"
                                                 value="{{ old('origin') }}" required>
@@ -151,7 +151,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                            <label>Tujuan</label>
+                                            <label>Destination</label>
                                             <input type="text" name="destination"
                                                 class="form-control @error('destination') is-invalid @enderror"
                                                 value="{{ old('destination') }}" required>
@@ -165,7 +165,7 @@
                                     <div class="row mt-3">
                                         <div class="col-6">
                                             <button style="width: 100%" class="btn btn-success"
-                                                type="submit">Simpan</button>
+                                                type="submit">Submit</button>
                                         </div>
                                     </div>
                                 </form>

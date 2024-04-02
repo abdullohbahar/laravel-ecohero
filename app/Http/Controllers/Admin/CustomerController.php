@@ -30,16 +30,16 @@ class CustomerController extends Controller
     }
 
 
-     public function detail()
-                {
-                    $totalCustomers = Customer::count(); // Menghitung jumlah total pelanggan
-                    return view('admin.customer.detail', compact('totalCustomers'));
-                     $customers = Customer::all(); // Mendapatkan semua data pelanggan
-                    return view('customer.detail', compact('customers'));
-                }
-    
+    public function detail()
+    {
+        $totalCustomers = Customer::count(); // Menghitung jumlah total pelanggan
+        return view('admin.customer.detail', compact('totalCustomers'));
+        $customers = Customer::all(); // Mendapatkan semua data pelanggan
+        return view('customer.detail', compact('customers'));
+    }
 
-   
+
+
 
 
 
@@ -79,7 +79,7 @@ class CustomerController extends Controller
             'post_code' => $request->post_code,
         ]);
 
-        return to_route('admin.customer')->with('success', 'Berhasil menambah pelanggan');
+        return to_route('admin.customer')->with('success', 'Success');
     }
 
     public function edit($id)
@@ -139,7 +139,7 @@ class CustomerController extends Controller
         $customer->post_code = $request->post_code;
         $customer->save();
 
-        return to_route('admin.customer')->with('success', 'Berhasil mengubah data pelanggan');
+        return to_route('admin.customer')->with('success', 'Success');
     }
 
     public function destroy($id)
@@ -152,14 +152,14 @@ class CustomerController extends Controller
 
             // Mengembalikan respons JSON sukses dengan status 200
             return response()->json([
-                'message' => 'Berhasil Menghapus Data',
+                'message' => 'Success',
                 'code' => 200,
                 'error' => false
             ]);
         } catch (\Exception $e) {
             // Menangkap exception jika terjadi kesalahan
             return response()->json([
-                'message' => 'Gagal Menghapus Data',
+                'message' => 'Failed',
                 'code' => 500,
                 'error' => $e->getMessage()
             ]);

@@ -8,7 +8,7 @@
                 <thead>
                     <tr>
                         <td colspan="2">
-                            <b>Nomor Resi: <span id="noResi">{{ $trackingData->resi_number }}</span>
+                            <b>Receipt Number: <span id="noResi">{{ $trackingData->resi_number }}</span>
                             </b>
                         </td>
                     </tr>
@@ -23,7 +23,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Tanggal Pengiriman</td>
+                        <td>Delivery date</td>
                         <td>
                             <b>
                                 <span id="sent_date">
@@ -32,7 +32,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Nama Pengirim</td>
+                        <td>Sender name</td>
                         <td>
                             <b>
                                 <span id="sent_date">{{ $trackingData->customer->first_name }}
@@ -41,7 +41,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Asal</td>
+                        <td>Origin</td>
                         <td>
                             <b>
                                 <span id="sent_date">{{ $trackingData->origin }}</span>
@@ -49,7 +49,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Tujuan</td>
+                        <td>Destination</td>
                         <td>
                             <b>
                                 <span id="sent_date">{{ $trackingData->destination }}</span>
@@ -57,7 +57,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Status Terbaru</td>
+                        <td>Current Status</td>
                         <td>
                             <b>
                                 <span id="sent_date"
@@ -83,7 +83,7 @@
                             </div>
                         </li>
                     @empty
-                        <h1>Belum ada Timeline</h1>
+                        <h1>No Timeline yet</h1>
                     @endforelse
                 </ul>
             </div>

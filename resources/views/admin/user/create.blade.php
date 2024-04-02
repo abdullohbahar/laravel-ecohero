@@ -1,7 +1,7 @@
 @extends('admin.layout.app')
 
 @section('title')
-    Tambah Data User
+    Add User
 @endsection
 
 @push('addons-css')
@@ -16,12 +16,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Tambah Data User</h1>
+                        <h1 class="m-0">Add User</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Tambah Data User</li>
+                            <li class="breadcrumb-item active">Add User</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -75,8 +75,8 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-12 col-md-6 mt-3">
-                                            <button type="submit" style="width: 100%" class="btn btn-success">Tambah
-                                                User</button>
+                                            <button type="submit" style="width: 100%"
+                                                class="btn btn-success">Submit</button>
                                         </div>
                                     </div>
                                 </form>

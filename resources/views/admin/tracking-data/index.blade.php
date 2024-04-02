@@ -36,7 +36,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <a href="{{ route('admin.create.tracking.data') }}" class="btn btn-primary">
-                                    Tambah data</a>
+                                    Add New</a>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -44,10 +44,10 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Pengirim</th>
-                                            <th>Nomor Resi</th>
-                                            <th>Asal</th>
-                                            <th>Tujuan</th>
+                                            <th>Sender</th>
+                                            <th>Resi Number</th>
+                                            <th>Origin</th>
+                                            <th>Destination</th>
                                             <th>Latest Position</th>
                                             <th>Action</th>
                                         </tr>
@@ -66,7 +66,7 @@
                                                     <div class="dropdown">
                                                         <button class="btn btn-secondary dropdown-toggle" type="button"
                                                             data-toggle="dropdown" aria-expanded="false">
-                                                            Aksi
+                                                            Action
                                                         </button>
                                                         <div class="dropdown-menu">
                                                             <a class="dropdown-item"
@@ -117,8 +117,8 @@
             var id = $(this).data("id");
 
             Swal.fire({
-                title: 'Apakah anda yakin?',
-                text: "Data yang berhubungan akan dihapus secara permanen!",
+                title: 'Are you sure?',
+                text: "The corresponding data will be permanently deleted!",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
@@ -143,7 +143,7 @@
                             } else if (response.code == 500) {
                                 Swal.fire({
                                     icon: 'error',
-                                    title: 'Gagal!',
+                                    title: 'Failed!',
                                     text: response.message,
                                 })
                             }
